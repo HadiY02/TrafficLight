@@ -1,0 +1,102 @@
+body {
+    background:
+    url('Images/Background.png') no-repeat center top,
+    url('Images/Sky.jpg') no-repeat center top;
+    background-size: 100% 105%;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100vh;
+    margin: 0;
+    padding-right: 10cm;
+}
+
+.traffic-light {
+    background: rgb(59, 59, 59);
+    width: 50px;
+    padding: 12px;
+    border-radius: 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    border: #888 solid 5px; 
+
+}
+.light {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgb(65, 65, 65);
+    margin: auto;
+    opacity: 0.3;
+    transition: opacity 0.2s;
+    border: none;
+    outline: none;
+    cursor: pointer; 
+}
+.light.red {
+    opacity: 1;
+}
+.pole {
+    width: 20px;
+    height: 200px;
+    background: #b0b0b0;
+    margin: auto;
+    border-radius: 0px;
+}
+.pole-base {
+    width: 100px;
+    height: 20px;
+    background: #888;
+    margin: auto;
+    border-radius: 0px;
+}
+.red {
+    background: red;
+}
+.green {
+    background: green;
+}
+.yellow {
+    background: yellow;
+}
+.container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: -40px;
+    margin-right: -120px;
+    position: relative;
+    z-index: 200; 
+}
+.road-img {
+    width: 2000px;
+    height: 155px;
+    position: absolute;
+    top: 574px;
+    left: 0;
+    z-index: 10;
+}
+.sidewalk-img {
+    width: 2000px;
+    height: 140px;
+    position: absolute;
+    top: 720px;
+    left: 0;
+    z-index: 100; 
+}
+.car {
+    width: 405px;
+    position: absolute;
+    top: 590px;
+    left: -120px;
+    z-index: 150;
+}
+
+@keyframes moveCar {
+    0%   { left: -120px; }
+    35%  { left: 700px; }  
+    70%  { left: 700px; }   
+    100% { left: 100vw; }   
+}
